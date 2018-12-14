@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace christmasToys
 {
-    public class Product
+    public class ProductsCollection
     {
-        public string NamePrefix { get; set; }
-        public Prices Prices { get; set; }
+        public List <Products> Presents { get; set; }
     }
 }

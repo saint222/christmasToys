@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace christmasToys
 {
-    public class Prices
+   public class Prices
     {
-        public PriceM PriceMin { get; set; }
+        public PriceMin price_min { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace christmasToys
             }
             ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);
 
-            foreach (var present in collection.Presents)
+            foreach (var present in collection.Products)
             {
                 present.ShowAllPresents();
             }

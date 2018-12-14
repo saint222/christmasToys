@@ -22,7 +22,7 @@ namespace christmasToys
 
         public void ShowAllPresents()
         {
-            Console.WriteLine($"The present {name_prefix} with it's price of { prices.price_min.amount} BYN;");
+            Console.WriteLine($"The present {name_prefix} with it's price { prices.price_min.amount} BYN;");
         }
 
 

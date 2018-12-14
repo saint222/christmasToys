@@ -10,6 +10,6 @@ namespace christmasToys
 {
     public class ProductsCollection
     {
-        public List <Products> Presents { get; set; }
+        public List <Products> Products { get; set; }
     }
 }

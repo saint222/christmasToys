@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace christmasToys
 {
-    class Program
+    public class Prices
     {
-        static void Main(string[] args)
-        {
-            
-            
-        }
+        public PriceM PriceMin { get; set; }
     }
 }

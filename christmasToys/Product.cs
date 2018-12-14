@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace christmasToys
 {
-    class Program
+    public class Product
     {
-        static void Main(string[] args)
-        {
-            
-            
-        }
+        public string NamePrefix { get; set; }
+        public Prices Prices { get; set; }
     }
 }

@@ -8,10 +8,12 @@ using Newtonsoft.Json;
 
 namespace christmasToys
 {
-    class Program
+     public class Program
+        
     {
         static void Main(string[] args)
         {
+            
             string json;
             using (var reader = new StreamReader("PresentsJSON.txt"))
             {
@@ -19,13 +21,16 @@ namespace christmasToys
             }
             ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);
 
-            foreach (var present in collection.Products)
+            foreach (var present in collection.products)
             {
-                present.ShowAllPresents();
+                present.ShowPresents();                
             }
             Console.ReadLine();
-            
-            
+            Console.WriteLine("And now a present for your motherinlaw!");            
+            collection.Sorted();
+            collection.CheapestProduct();
+            Console.ReadLine();            
+
         }
     }
 }

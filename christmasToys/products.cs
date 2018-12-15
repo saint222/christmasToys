@@ -10,17 +10,10 @@ namespace christmasToys
     {
         public string name_prefix { get; set; }
         public Prices prices { get; set; }
+       
 
+        public void ShowPresents()
 
-
-        //public Products() { }
-        //public Products(string name, Prices pr)
-        //{
-        //    name_prefix = name;
-        //    prices = pr;
-        //}
-
-        public void ShowAllPresents()
         {
             Console.WriteLine($"The present {name_prefix} with it's price { prices.price_min.amount} BYN;");
         }

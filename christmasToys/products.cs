@@ -15,7 +15,7 @@ namespace christmasToys
         public void ShowPresents()
 
         {
-            Console.WriteLine($"The present {name_prefix} with it's price { prices.price_min.amount} BYN;");
+            Console.WriteLine($"{name_prefix} по цене { prices.price_min.amount} BYN за штуку;");
         }
 
 

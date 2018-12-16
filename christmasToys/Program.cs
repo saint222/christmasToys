@@ -25,10 +25,11 @@ namespace christmasToys
             {
                 present.ShowPresents();                
             }
-            Console.ReadLine();
-            Console.WriteLine("And now a present for your motherinlaw!");            
-            collection.Sorted();
-            collection.CheapestProduct();
+            Console.ReadLine();                        
+            
+            collection.CheapestProduct();            
+            collection.MostExpensiveProduct();            
+            collection.ProductsTillFifty();
             Console.ReadLine();            
 
         }

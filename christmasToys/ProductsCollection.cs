@@ -11,24 +11,36 @@ namespace christmasToys
     public class ProductsCollection
     {
         public List <Products> products { get; set; }
-        public void Sorted()
+     
+        public void CheapestProduct()
         {
-            var cheapest = products.OrderBy(x => x.prices.price_min.amount);
+            Console.WriteLine("And now - a present for a mother-in-law (the cheapest one)!");
+            var cheapest = products.OrderBy(x => x.prices.price_min.amount).Take(1);
 
             foreach (var item in cheapest)
-            
+
             {
-                
+                item.ShowPresents();
             }
 
             Console.ReadLine();
         }
-        public void CheapestProduct()
+        public void MostExpensiveProduct()
         {
-            var cheapest = products.Take(1);
+            Console.WriteLine("A present for me (the most expensive one)!:)");
+            var mostExpensive = products.OrderBy(x => x.prices.price_min.amount).Last();
 
-            foreach (var item in cheapest)
+            mostExpensive.ShowPresents();
 
+            Console.ReadLine();
+        }
+
+        public void ProductsTillFifty()
+        {
+            Console.WriteLine("Here is the list of the products with the sum of their prices - 50 BYN;");
+            double count = 0;
+            var tillFifty = products.OrderBy(x => x.prices.price_min.amount).TakeWhile(x => (count += x.prices.price_min.amount) <=50);
+            foreach (var item in tillFifty)
             {
                 item.ShowPresents();
             }

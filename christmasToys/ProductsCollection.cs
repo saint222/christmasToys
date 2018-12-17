@@ -16,7 +16,6 @@ namespace christmasToys
         {
             Console.WriteLine("A present for the mother-in-law (the cheapest one):");
             var cheapest = products.OrderBy(x => x.prices.price_min.amount).Take(1);
-
             foreach (var item in cheapest)
 
             {
@@ -25,6 +24,7 @@ namespace christmasToys
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
         }
+
         public void MostExpensiveProduct()
         {
             Console.WriteLine("A present for me (the most expensive one):");
@@ -47,6 +47,7 @@ namespace christmasToys
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
         }
+
         public void ProductsTillEighty()
         {
             Console.WriteLine("Here is the list of the random products with the sum of their prices - 80 BYN:");
@@ -71,8 +72,8 @@ namespace christmasToys
 
         public void PriceTillFourty()
         {
-            var sum_1 = products.Sum(x => x.prices.price_min.amount >= 40);
-            Console.WriteLine($"{sum_1}");
+            var sum_1 = products.Where(x => x.prices.price_min.amount >= 40).Sum(x => x.prices.price_min.amount);
+            Console.WriteLine($"The sum of the present prices which cost less than 40 BYN is {sum_1} BYN.");
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
         }
@@ -90,6 +91,5 @@ namespace christmasToys
             Console.ReadLine();
         }
     }
-
 
 }

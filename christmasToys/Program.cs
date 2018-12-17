@@ -19,10 +19,8 @@ namespace christmasToys
             using (var reader = new StreamReader("PresentsJSON.txt"))
             {
                 json = reader.ReadToEnd();
-            }
-            
-            ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);
-            
+            }            
+            ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);            
             foreach (var present in collection.products)
             {
                 present.ShowPresents();                
@@ -37,7 +35,7 @@ namespace christmasToys
             collection.TotalPrice();
             collection.PriceTillFourty();
             collection.PriceTillTwentyFour();
-            Console.ReadLine();            
+            Console.ReadLine();         
 
         }
     }

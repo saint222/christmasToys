@@ -10,14 +10,15 @@ namespace christmasToys
     {
         public string name_prefix { get; set; }
         public Prices prices { get; set; }
-       
+
 
         public void ShowPresents()
 
         {
             Console.WriteLine($"{name_prefix} по цене { prices.price_min.amount} BYN за штуку;");
+
         }
 
-
+        
     }
 }

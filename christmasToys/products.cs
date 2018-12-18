@@ -18,7 +18,7 @@ namespace christmasToys
             Console.WriteLine($"{name_prefix} по цене { prices.price_min.amount} BYN за штуку;");
 
         }
-
         
+
     }
 }

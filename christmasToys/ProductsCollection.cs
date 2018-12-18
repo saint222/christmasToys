@@ -11,7 +11,7 @@ namespace christmasToys
     public class ProductsCollection
     {
         public List <Products> products { get; set; }
-     
+
         public void CheapestProduct()
         {
             Console.WriteLine("A present for the mother-in-law (the cheapest one):");
@@ -52,7 +52,7 @@ namespace christmasToys
         {
             Console.WriteLine("Here is the list of the random products with the sum of their prices - 80 BYN:");
             double count = 0;
-            var tillEighty = products.TakeWhile(x => (count += x.prices.price_min.amount) <= 80);
+            var tillEighty = products.OrderBy(n => Guid.NewGuid()).TakeWhile(x => (count += x.prices.price_min.amount) <= 80);
             foreach (var item in tillEighty)
             {
                 item.ShowPresents();

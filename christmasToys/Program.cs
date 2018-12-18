@@ -28,8 +28,9 @@ namespace christmasToys
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
 
-            collection.CheapestProduct();            
-            collection.MostExpensiveProduct();            
+
+            collection.CheapestProduct();
+            collection.MostExpensiveProduct();
             collection.ProductsTillFifty();
             collection.ProductsTillEighty();
             collection.TotalPrice();

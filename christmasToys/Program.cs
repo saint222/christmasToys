@@ -8,8 +8,8 @@ using Newtonsoft.Json;
 
 namespace christmasToys
 {
-     public class Program
-        
+    public class Program
+
     {
         static void Main(string[] args)
         {
@@ -19,11 +19,11 @@ namespace christmasToys
             using (var reader = new StreamReader("PresentsJSON.txt"))
             {
                 json = reader.ReadToEnd();
-            }            
-            ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);            
+            }
+            ProductsCollection collection = JsonConvert.DeserializeObject<ProductsCollection>(json);
             foreach (var present in collection.products)
             {
-                present.ShowPresents();                
+                present.ShowPresents();
             }
             Console.WriteLine("Press Enter to continue...");
             Console.ReadLine();
@@ -36,7 +36,14 @@ namespace christmasToys
             collection.TotalPrice();
             collection.PriceTillFourty();
             collection.PriceTillTwentyFour();
-            Console.ReadLine();         
+
+            string line = JsonConvert.SerializeObject(collection); // сериализация
+
+            Console.WriteLine($"{line}"); //вывод получившегося джейсона 
+
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
+            Console.ReadLine();
 
         }
     }
